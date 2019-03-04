@@ -25,6 +25,7 @@ namespace asp.NETMVCCRUD.Models
         public string Office { get; set; }
         public Nullable<int> Age { get; set; }
         public Nullable<int> Salary { get; set; }
+        [DisplayFormat(DataFormatString = "{0:yyyy-MM-dd")]
         public Nullable<System.DateTime> DateAdded { get; set; }
     }
 }

@@ -37,7 +37,13 @@
                     "datatype": "json"
                 },
                 "columns": [
-                    { "data": "DateAdded" },
+                    {
+                        "data": "DateAdded",
+                        "type": "date",
+                        "render": function (data) {
+                            return moment.utc(data, "x").format('LL');
+                        }
+                    },
                     { "data": "FirstName"},
                     { "data": "LastName" },
                     { "data": "Position" },
